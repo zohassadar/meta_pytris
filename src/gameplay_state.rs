@@ -197,8 +197,8 @@ impl<const MODIFIER: Modifier> GameplayState<MODIFIER> {
     pub fn vanilla_tiles(&mut self) -> [u8; 256] {
         self.tiles.map(|t| match t {
             Some(Tile::IOT) => 0x7b,
-            Some(Tile::JS) => 0x7c,
-            Some(Tile::LZ) => 0x7d,
+            Some(Tile::LZ) => 0x7c,
+            Some(Tile::JS) => 0x7d,
             None => 0xef,
         })
 
