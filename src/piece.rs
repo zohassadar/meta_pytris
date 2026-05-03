@@ -22,6 +22,13 @@ pub enum Piece {
     None = 19,
 }
 
+#[derive(Clone, Copy, Debug, Eq, PartialEq)]
+pub enum Tile {
+    IOT,
+    LZ,
+    JS,
+}
+
 impl Piece {
     #[must_use]
     pub fn get_clockwise_rotation(self) -> Self {
@@ -76,6 +83,31 @@ impl Piece {
         };
 
         COUNTERCLOCKWISE_ROTATIONS[self as usize]
+    }
+    #[must_use]
+    pub fn get_tile(self) -> Option<Tile> {
+        const TILES: [Tile; 19] = [
+            Tile::IOT,
+            Tile::IOT,
+            Tile::IOT,
+            Tile::IOT,
+            Tile::JS,
+            Tile::JS,
+            Tile::JS,
+            Tile::JS,
+            Tile::LZ,
+            Tile::LZ,
+            Tile::IOT,
+            Tile::JS,
+            Tile::JS,
+            Tile::LZ,
+            Tile::LZ,
+            Tile::LZ,
+            Tile::LZ,
+            Tile::IOT,
+            Tile::IOT,
+        ];
+        Some(TILES[self as usize])
     }
 
     #[must_use]
