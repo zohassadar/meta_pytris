@@ -1,11 +1,13 @@
 # meta_nestris
 
+Forked from [negative-seven/meta_nestris](https://github.com/negative-seven/meta_nestris)
+
 A largely functionally accurate recreation of NES Tetris in Rust.
 
 ## Intentional differences from the base game
 
 - although they ultimately result in the same state, some operations have been reordered for the purposes of performance and/or simplification.
-  
+
 ## Game events which are not intended to be supported
 
 - reaching the demo
@@ -13,7 +15,7 @@ A largely functionally accurate recreation of NES Tetris in Rust.
 - the in-game reset code
 - anything that happens after death or a B-type clear
 - lag/crashing at high levels
-  
+
 ## Known untested behavior
 
 - handling of offscreen tiles
