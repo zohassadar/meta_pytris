@@ -1,6 +1,12 @@
-# meta_nestris
+# meta_pytris
 
 Forked from [negative-seven/meta_nestris](https://github.com/negative-seven/meta_nestris)
+
+## Install
+
+`pip install git+https://github.com/zohassadar/meta_pytris`
+
+# Original README
 
 A largely functionally accurate recreation of NES Tetris in Rust.
 

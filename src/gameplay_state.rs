@@ -194,6 +194,15 @@ impl<const MODIFIER: Modifier> GameplayState<MODIFIER> {
 
         self.previous_input = input;
     }
+    pub fn vanilla_tiles(&mut self) -> [u8; 256] {
+        self.tiles.map(|t| match t {
+            Some(Tile::IOT) => 0x7b,
+            Some(Tile::JS) => 0x7c,
+            Some(Tile::LZ) => 0x7d,
+            None => 0xef,
+        })
+
+    }
 
     fn step_main_logic(&mut self, input: Input) {
         if self.game_mode_state == GameModeState::HandleGameplay {

@@ -66,6 +66,7 @@ mod piece;
 mod play_state;
 mod random;
 mod state;
+mod nestris;
 
 pub use game_mode_state::*;
 pub use game_type::*;
