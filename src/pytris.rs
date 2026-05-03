@@ -1,7 +1,7 @@
 use pyo3::prelude::*;
 
 #[pymodule]
-mod pytris {
+mod meta_pytris {
     use crate::modifier::Modifier;
     use crate::GameType;
     use crate::GameplayState;
